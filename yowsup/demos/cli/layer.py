@@ -523,7 +523,8 @@ class YowsupCliLayer(Cli, YowInterfaceLayer):
 
     def getMediaMessageBody(self, message):
         if message.getMediaType() in ("image", "audio", "video"):
-            with open("file","wb") as f:
+            filename=datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')+".jpg"
+            with open(filename,"wb") as f:
                 f.write(message.getMediaContent())
             return self.getDownloadableMediaMessageBody(message)
         else:
