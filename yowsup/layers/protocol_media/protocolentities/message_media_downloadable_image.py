@@ -53,7 +53,7 @@ class ImageDownloadableMediaMessageProtocolEntity(DownloadableMediaMessageProtoc
         self.cryptKeys  = '576861747341707020496d616765204b657973'
 
     def getCaption(self):
-        return self.caption
+        return self.caption.encode('utf-8')
 
     def toProtocolTreeNode(self):
         node = super(ImageDownloadableMediaMessageProtocolEntity, self).toProtocolTreeNode()
