@@ -4,6 +4,8 @@ from yowsup.layers.auth import YowAuthenticationProtocolLayer
 from yowsup.layers import YowLayerEvent, EventCallback
 from yowsup.layers.network import YowNetworkLayer
 import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 from yowsup.common import YowConstants
 import datetime
 import os
